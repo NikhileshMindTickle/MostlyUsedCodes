@@ -37,6 +37,7 @@ Dependenies verisons
     
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
     implementation "com.android.support:cardview-v7:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
     
     implementation 'com.google.code.gson:gson:2.8.0'
     
