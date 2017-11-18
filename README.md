@@ -66,7 +66,8 @@ iOS User Agent
     Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3
 ```
 
-GCM Get Token        
+GCM Get Token   
+```
 private class GCMRegister extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... params) {
@@ -81,4 +82,5 @@ private class GCMRegister extends AsyncTask<String, String, String> {
             }
             return "";
         }
-    }
+}
+```
