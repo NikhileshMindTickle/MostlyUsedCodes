@@ -1,3 +1,17 @@
+# Dependencies
+
+Data Binding
+apply plugin: 'kotlin-kapt'
+
+android {
+    dataBinding {
+        enabled = true
+    }
+}
+
+kapt 'com.android.databinding:compiler:3.0.1'
+
+
 # Latest Android version of dependencies
 
 Put this in main build.gradle
