@@ -1,6 +1,6 @@
 # Dependencies
 
-Data Binding
+*Data Binding*
 ```
 apply plugin: 'kotlin-kapt'
 
