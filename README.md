@@ -1,6 +1,7 @@
 # Dependencies
 
 Data Binding
+```
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -10,7 +11,7 @@ android {
 }
 
 kapt 'com.android.databinding:compiler:3.0.1'
-
+```
 
 # Latest Android version of dependencies
 
