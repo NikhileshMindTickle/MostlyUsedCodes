@@ -1,3 +1,4 @@
+```
 For adding to new repository
 git init
 git remote add origin https://github.com/MeNiks/MyFragmentCommunication.git
@@ -161,3 +162,4 @@ git push origin <tag>
 To delete tag
 git push --delete origin tagname (To delete from server)
 git tag --delete tagname (To delete locally)
+```
