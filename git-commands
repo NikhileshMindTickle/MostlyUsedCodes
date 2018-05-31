@@ -1,3 +1,8 @@
+git public/private key
+>ssh-keygen
+enter enter 
+1. Add public key on server.
+2. Use private on client machine.
 
 For adding to new repository
 git init
