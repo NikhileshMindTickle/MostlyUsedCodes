@@ -128,6 +128,16 @@ git stash drop <id>
 Delete all of the stored stashes with:
 git stash clear
 
+Rebase
+git rebase development
+go on resolving conflicts do not commit then
+git rebase --continue
+git push origin -f branch_name
+
+
+Delete any file from git
+git rm /abc/file_name.txt
+
 Filesystem Check
 git fsck --full
 
