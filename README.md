@@ -35,7 +35,7 @@ ext {
 
     kotlinVersion = '1.2.51'
 
-    retrofit_version="2.4.0"
+    retrofitVersion="2.4.0"
 }
 
 repositories {
@@ -102,9 +102,9 @@ implementation files('releases/release-locationhelper-1.2.aar')
 
 //Retrofit
 def retrofit_version="2.4.0"
-implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
 //Rx Java
 implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
