@@ -103,7 +103,7 @@ implementation files('releases/release-datepicker-1.9.aar')
 //noinspection GradlePath
 implementation files('releases/release-locationhelper-1.2.aar')
 
-//Retrofit
+//Retrofit & OkHttp
 implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
