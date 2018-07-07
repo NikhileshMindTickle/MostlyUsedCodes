@@ -38,7 +38,7 @@ buildscript {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     
     //Niks Libraries
-	  //noinspection GradlePath
+    //noinspection GradlePath
     implementation files('releases/release-base-4.6.aar')
     //noinspection GradlePath
     implementation files('releases/release-net-1.4.aar')
