@@ -17,6 +17,9 @@ kapt 'com.android.databinding:compiler:3.0.1'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+
+//Kotlin
+implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 ```
 
 # Latest Android version of dependencies
