@@ -12,22 +12,35 @@ android {
 
 kapt 'com.android.databinding:compiler:3.0.1'
 ```
+*Kotlin Enable*
+```
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+```
 
 # Latest Android version of dependencies
 
 Put this in main build.gradle
-
+```
     ext {
-        global_compileSdkVersion = 26
-        global_buildToolsVersion = "26.0.2"
+        globalCompileSdkVersion = 27
+        globalBuildToolsVersion = "27.0.3"
 
         minimumSdkVersion = 16
-        targetedSdkVersion = 26
+        targetedSdkVersion = 27
 
-        supportLibVersion = '26.1.0'
-        playServiceVersion = '11.6.0'
+        supportLibVersion = '27.1.1'
+        playServiceVersion = '15.0.1'
 
-        kotlin_version = '1.1.60'
+        kotlinVersion = '1.2.51'
+        
+        retrofit_version="2.4.0"
+    }
+    
+    repositories {
+        google()
+        jcenter()
     }
     
     allprojects {
@@ -41,35 +54,67 @@ Put this in main build.gradle
             }
         }
     }
-
+```
 
 Dependenies verisons
+```
+    distributionUrl=https\://services.gradle.org/distributions/gradle-4.8-all.zip
 
-    distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
-
-    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:3.2.0-alpha18'
     classpath 'io.fabric.tools:gradle:1.24.5'
     
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    
+    //Support
+    implementation "com.android.support:support-v4:$supportLibVersion"
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
     implementation "com.android.support:cardview-v7:$supportLibVersion"
     implementation "com.android.support:design:$supportLibVersion"
     
+    //Constraint Layout
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    
+    //Gson
     implementation 'com.google.code.gson:gson:2.8.0'
     
+    //Picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation "com.google.android.gms:play-services-gcm:$playServiceVersion"
-    implementation 'com.clevertap.android:clevertap-android-sdk:3.1.6'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     
-    implementation(name: 'release-base-4.4', ext: 'aar')
-    implementation(name: 'release-net-1.3', ext: 'aar')
-    implementation(name: 'release-datepicker-1.9', ext: 'aar')
-    implementation(name: 'release-timepicker-1.4', ext: 'aar')
+    //Play Services
+    implementation "com.google.android.gms:play-services-gcm:$playServiceVersion"
+    implementation "com.google.android.gms:play-services-location:$playServiceVersion"
+    
+    //Clever Tap
+    implementation 'com.clevertap.android:clevertap-android-sdk:3.1.6'
+    
+    //Niks Libraries
+    //noinspection GradlePath
+    implementation files('releases/release-base-4.6.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-net-1.4.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-timepicker-1.4.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-datepicker-1.9.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-locationhelper-1.2.aar')
+    
+    //Retrofit
+    def retrofit_version="2.4.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    
+    //Testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     
     implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
     }
-    
+```
     
 Android User Agent
 ```
