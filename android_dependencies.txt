@@ -1,0 +1,50 @@
+//project Level
+
+buildscript {
+    ext {
+        global_compileSdkVersion = 27
+        global_buildToolsVersion = "27.0.3"
+
+        minimumSdkVersion = 16
+        targetedSdkVersion = 27
+
+        supportLibVersion = '27.1.1'
+        playServiceVersion = '15.0.1'
+
+        kotlinVersion = '1.2.51'
+
+    }
+}
+
+
+    
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:support-v4:$supportLibVersion"
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    testImplementation 'junit:junit:4.12'
+
+    //Testing
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    
+    //Retrofit
+    def retrofit_version="2.4.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    
+    //Niks Libraries
+	  //noinspection GradlePath
+    implementation files('releases/release-base-4.6.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-net-1.4.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-timepicker-1.4.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-datepicker-1.9.aar')
+    //noinspection GradlePath
+    implementation files('releases/release-locationhelper-1.2.aar')
