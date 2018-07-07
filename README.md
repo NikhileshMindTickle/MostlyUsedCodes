@@ -110,6 +110,9 @@ implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
 
+//Rx view binding helper
+implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+
 //Testing
 testImplementation 'junit:junit:4.12'
 androidTestImplementation 'com.android.support.test:runner:1.0.2'
