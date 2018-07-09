@@ -59,9 +59,6 @@ ext {
 	//Glide
 	glideVersion="4.6.1"
 
-	//Loader
-	implementation 'com.wang.avi:library:2.1.3'
-
 	//Firebase
 	firebaseCoreVersion="16.0.1"
 	firebaseVersion = '17.1.0'
@@ -213,6 +210,9 @@ implementation 'com.google.code.gson:gson:2.8.0'
 implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+//Loader
+implementation 'com.wang.avi:library:2.1.3'
 
 //Ok Http
 implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
