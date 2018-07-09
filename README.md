@@ -28,32 +28,107 @@ Put this in main build.gradle
 ```
 ext {
 
-    globalCompileSdkVersion = 27
-    globalBuildToolsVersion = "27.0.3"
+	globalCompileSdkVersion = 27
+	globalBuildToolsVersion = "27.0.3"
 
-    minimumSdkVersion = 16
-    targetedSdkVersion = 27
+	minimumSdkVersion = 16
+	targetedSdkVersion = 27
 
-    //Support
-    supportLibVersion = '27.1.1'
-    
-    //Play Services
-    playServiceVersion = '15.0.1'
+	//Kotlin
+	kotlinVersion = '1.2.51'
 
-    //Kotlin
-    kotlinVersion = '1.2.51'
+	//Support
+	supportLibVersion = '27.1.1'
 
-    //Retrofit & OkHttp
-    retrofitVersion="2.4.0"
-    
-    //Multidex
-    multidexVersion = '1.0.3'
-    
-    //Paging Library
-    pagingVersion = "1.0.1"
-    
-    //Android Navigation
-    arch_navigation_version = "1.0.0-alpha02"
+	//Play Services
+	playServiceVersion = '15.0.1'
+
+	//Paging Library
+	pagingVersion = "1.0.1"
+	rxPaggingVersion = '1.0.1'
+
+	//Constraint Layout
+	constraintLayoutVersion = "1.1.2"
+
+	//Multidex
+	multidexVersion = '1.0.3'
+
+	//Android Navigation
+	archNavigationVersion = "1.0.0-alpha02"
+
+	//Glide
+	glideVersion="4.6.1"
+
+	//Loader
+	implementation 'com.wang.avi:library:2.1.3'
+
+	//Firebase
+	firebaseCoreVersion="16.0.1"
+	firebaseVersion = '17.1.0'
+	firebaseAuthVersion = '16.0.2'
+	firebaseJobDispatcher="0.8.5"
+
+	//Retrofit & OkHttp
+	retrofitVersion="2.4.0"
+
+	//Ok Http
+	okhttpVersion = '3.10.0'
+
+	//Stetho
+	stethoVersion = '1.5.0'
+
+	//Rx Java
+	rxjavaVersion="2.1.9"
+
+	//Rx Java Android
+	rxandroidVersion = '2.0.2'
+
+	//Rx Java 2 Debug
+	rxJavaDebug= "1.2.2"
+
+	//Rx Kotlin
+	rxkotlinVersion = '2.2.0'
+
+	//Rx Relay
+	rxrelay_version = '2.0.0'
+
+	//Rx Binding
+	rxBindingVersion = '2.1.1'
+
+	//Room
+	archRoomVersion = '1.1.1'
+
+	//Dagger
+	daggerVersion = '2.16'
+
+	//Anko
+	ankoVersion = '0.10.4'
+
+	//Leak Canary
+	leakcanaryVersion = '1.5'
+
+	//Lifecycle and LiveData and ViewModel
+	lifecycleVersion = '1.1.0'
+	lifecycleExtVersion = '1.1.1'
+
+	//Timber
+	timberVersion = '4.7.0'
+
+	//Testing
+	jsonVersion = '20140107'
+	junitVersion = '4.12'
+	archCoreTesting = '1.1.1'
+	testRunnerVersion = '1.0.2'
+	espressoVersion = '3.0.2'
+
+	//Robolectric
+	robolectricVersion = '3.8'
+	robolectricMultidexVersion = '3.3'
+
+	//Mockito
+	mokitoVersion = '2.8.9'
+	mokitoAndroidVersion = '2.7.22'
+
 }
 
 repositories {
@@ -82,7 +157,7 @@ classpath 'com.android.tools.build:gradle:3.2.0-alpha18'
 classpath 'io.fabric.tools:gradle:1.24.5'
 
 //Kotlin
-implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
 //Support
 implementation "com.android.support:support-v4:$supportLibVersion"
@@ -94,34 +169,78 @@ implementation "com.android.support:design:$supportLibVersion"
 implementation "com.android.support:recyclerview-v7:$supportLibVersion"
 implementation "com.android.support:transition:$supportLibVersion"
 
-//Paging Library
-implementation "android.arch.paging:runtime:$pagingVersion"
-implementation "android.arch.paging:runtime:$pagingVersion"
-implementation "android.arch.paging:rxjava2:$rxpagging_version"
-testImplementation "android.arch.paging:common:$pagingVersion"
-
-//Android Navigation
-implementation "android.arch.navigation:navigation-fragment-ktx:$arch_navigation_version"
-implementation "android.arch.navigation:navigation-ui-ktx:$arch_navigation_version"
-
-//Multidex
-implementation "com.android.support:multidex:$multidexVersion"
-
-//Constraint Layout
-implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-
-//Gson
-implementation 'com.google.code.gson:gson:2.8.0'
-
-//Picasso
-implementation 'com.squareup.picasso:picasso:2.5.2'
-
 //Play Services
 implementation "com.google.android.gms:play-services-gcm:$playServiceVersion"
 implementation "com.google.android.gms:play-services-location:$playServiceVersion"
 
+//Paging Library
+implementation "android.arch.paging:runtime:$pagingVersion"
+implementation "android.arch.paging:runtime:$pagingVersion"
+implementation "android.arch.paging:rxjava2:$rxPaggingVersion"
+testImplementation "android.arch.paging:common:$pagingVersion"
+
+//Constraint Layout
+implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+
+//Multidex
+implementation "com.android.support:multidex:$multidexVersion"
+
+//Android Navigation
+implementation "android.arch.navigation:navigation-fragment-ktx:$archNavigationVersion"
+implementation "android.arch.navigation:navigation-ui-ktx:$archNavigationVersion"
+
+//Picasso
+//implementation 'com.squareup.picasso:picasso:2.5.2'
+
 //Clever Tap
 implementation 'com.clevertap.android:clevertap-android-sdk:3.1.6'
+
+//Glide
+implementation "com.github.bumptech.glide:glide:$glideVersion"
+kapt "com.github.bumptech.glide:compiler:$glideVersion"
+implementation 'jp.wasabeef:glide-transformations:3.1.1'
+
+//Firebase
+implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
+implementation "com.google.firebase:firebase-messaging:$firebaseVersion"
+implementation "com.google.firebase:firebase-auth:$firebaseAuthVersion"
+implementation 'com.firebase:firebase-jobdispatcher:$firebaseJobDispatcher'
+
+//Gson
+implementation 'com.google.code.gson:gson:2.8.0'
+
+//Retrofit & OkHttp
+implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+//Ok Http
+implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+testImplementation "com.squareup.okhttp3:mockwebserver:$okhttpVersion"
+
+//Stetho
+implementation "com.facebook.stetho:stetho:$stethoVersion"
+implementation "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
+
+//Rx Java
+implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+
+//Rx Java Android
+implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+
+//Rx Java 2 Debug
+implementation 'com.akaita.java:rxjava2-debug:$rxJavaDebug'
+
+//Rx Kotlin
+implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlinVersion"
+
+//Rx Relay
+implementation "com.jakewharton.rxrelay2:rxrelay:$rxrelay_version"
+
+//Rx Binding
+implementation "com.jakewharton.rxbinding2:rxbinding:$rxBindingVersion"
+
 
 //Niks Libraries
 //noinspection GradlePath
@@ -135,26 +254,76 @@ implementation files('releases/release-datepicker-1.9.aar')
 //noinspection GradlePath
 implementation files('releases/release-locationhelper-1.2.aar')
 
-//Retrofit & OkHttp
-implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+//Room
+implementation "android.arch.persistence.room:runtime:$archRoomVersion"
+kapt "android.arch.persistence.room:compiler:$archRoomVersion"
+implementation "android.arch.persistence.room:rxjava2:$archRoomVersion"
+testImplementation "android.arch.core:core-testing:$archRoomVersion"
+testImplementation "android.arch.persistence.room:testing:$archRoomVersion"
 
-//Rx Java
-implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+//Dagger
+implementation "com.google.dagger:dagger:$daggerVersion"
+kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+implementation "com.google.dagger:dagger-android-support:$daggerVersion"
 
-//Rx view binding helper
-implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+//Anko
+implementation "org.jetbrains.anko:anko-sdk25:$ankoVersion"
+//sdk15, sdk19, sdk21, sdk23 are also available
+implementation "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+//Coroutine listeners for Anko Layouts
+implementation "org.jetbrains.anko:anko-sdk25-coroutines:$ankoVersion"
+implementation "org.jetbrains.anko:anko-appcompat-v7-coroutines:$ankoVersion"
+//Commons
+implementation "org.jetbrains.anko:anko-commons:$ankoVersion"
+//For Snackbar
+implementation "org.jetbrains.anko:anko-design:$ankoVersion"
+
+//Leak Canary
+debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanaryVersion"
+releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanaryVersion"
+
+//About
+implementation('com.mikepenz:aboutlibraries:5.8.1@aar') {
+    transitive = true
+}
+
+//Crashlytics
+implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+    transitive = true
+}
+
+
+//Lifecycle and LiveData and ViewModel
+implementation "android.arch.lifecycle:runtime:$lifecycleVersion"
+implementation "android.arch.lifecycle:extensions:$lifecycleExtVersion"
+implementation "android.arch.lifecycle:common-java8:$lifecycleExtVersion"
+kapt "android.arch.lifecycle:compiler:$lifecycleExtVersion"
+
+//Timber
+implementation "com.jakewharton.timber:timber:$timberVersion"
+
 
 //Testing
-testImplementation 'junit:junit:4.12'
-androidTestImplementation 'com.android.support.test:runner:1.0.2'
-androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+testImplementation "org.json:json:$jsonVersion"
+testImplementation "junit:junit:$junitVersion"
+testImplementation "com.android.support:support-annotations:$supportLibVersion"
+androidTestImplementation "android.arch.core:core-testing:$archCoreTesting"
+androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
+androidTestImplementation "com.android.support.test:rules:$testRunnerVersion"
+androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
 
-implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-    transitive = true;
-}
+//Robolectric
+testImplementation "org.robolectric:robolectric:$robolectricVersion"
+testImplementation "org.robolectric:shadows-multidex:$robolectricMultidexVersion"
+
+//Mockito
+testImplementation "org.mockito:mockito-core:$mokitoVersion"
+testImplementation "org.mockito:mockito-inline:$mokitoVersion"
+androidTestImplementation "org.mockito:mockito-android:$mokitoAndroidVersion"
+
+//ExoPlayer
+implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
 ```
     
 Android User Agent
