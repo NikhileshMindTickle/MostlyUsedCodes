@@ -27,18 +27,33 @@ implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 Put this in main build.gradle
 ```
 ext {
+
     globalCompileSdkVersion = 27
     globalBuildToolsVersion = "27.0.3"
 
     minimumSdkVersion = 16
     targetedSdkVersion = 27
 
+    //Support
     supportLibVersion = '27.1.1'
+    
+    //Play Services
     playServiceVersion = '15.0.1'
 
+    //Kotlin
     kotlinVersion = '1.2.51'
 
+    //Retrofit & OkHttp
     retrofitVersion="2.4.0"
+    
+    //Multidex
+    multidexVersion = '1.0.3'
+    
+    //Paging Library
+    pagingVersion = "1.0.1"
+    
+    //Android Navigation
+    arch_navigation_version = "1.0.0-alpha02"
 }
 
 repositories {
@@ -73,7 +88,24 @@ implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 implementation "com.android.support:support-v4:$supportLibVersion"
 implementation "com.android.support:appcompat-v7:$supportLibVersion"
 implementation "com.android.support:cardview-v7:$supportLibVersion"
+implementation "com.android.support:gridlayout-v7:$supportLibVersion"
+implementation "com.android.support:support-v13:$supportLibVersion"
 implementation "com.android.support:design:$supportLibVersion"
+implementation "com.android.support:recyclerview-v7:$supportLibVersion"
+implementation "com.android.support:transition:$supportLibVersion"
+
+//Paging Library
+implementation "android.arch.paging:runtime:$pagingVersion"
+implementation "android.arch.paging:runtime:$pagingVersion"
+implementation "android.arch.paging:rxjava2:$rxpagging_version"
+testImplementation "android.arch.paging:common:$pagingVersion"
+
+//Android Navigation
+implementation "android.arch.navigation:navigation-fragment-ktx:$arch_navigation_version"
+implementation "android.arch.navigation:navigation-ui-ktx:$arch_navigation_version"
+
+//Multidex
+implementation "com.android.support:multidex:$multidexVersion"
 
 //Constraint Layout
 implementation 'com.android.support.constraint:constraint-layout:1.1.2'
