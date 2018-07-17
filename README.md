@@ -148,9 +148,10 @@ allprojects {
 
 Dependenies verisons
 ```
-distributionUrl=https\://services.gradle.org/distributions/gradle-4.8-all.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-4.9-rc-1-all.zip
 
-classpath 'com.android.tools.build:gradle:3.2.0-alpha18'
+//Main
+classpath 'com.android.tools.build:gradle:3.3.0-alpha03'
 classpath 'io.fabric.tools:gradle:1.24.5'
 
 //Kotlin
