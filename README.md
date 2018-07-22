@@ -9,7 +9,7 @@ android {
         enabled = true
     }
 }
-
+//Data Binding
 kapt 'com.android.databinding:compiler:3.0.1'
 ```
 *Kotlin Enable*
