@@ -1,0 +1,113 @@
+ext {
+
+    globalCompileSdkVersion = 27
+    globalBuildToolsVersion = "27.0.3"
+
+    minimumSdkVersion = 16
+    targetedSdkVersion = 27
+
+    //Support
+    supportLibVersion = '27.1.1'
+
+    //Play Services
+    playServiceVersion = '15.0.1'
+
+    //Paging Library
+    pagingVersion = "1.0.1"
+    rxPaggingVersion = '1.0.1'
+
+    //Constraint Layout
+    constraintLayoutVersion = "1.1.2"
+
+    //Multidex
+    multidexVersion = '1.0.3'
+
+    //Android Navigation
+    archNavigationVersion = "1.0.0-alpha02"
+
+    //Glide
+    glideVersion="4.6.1"
+
+    //Firebase
+    firebaseCoreVersion="16.0.1"
+    firebaseVersion = '17.1.0'
+    firebaseAuthVersion = '16.0.2'
+    firebaseJobDispatcher="0.8.5"
+
+    //Retrofit & OkHttp
+    retrofitVersion="2.4.0"
+
+    //Ok Http
+    okhttpVersion = '3.10.0'
+
+    //Stetho
+    stethoVersion = '1.5.0'
+
+    //Rx Java
+    rxjavaVersion="2.1.9"
+
+    //Rx Java Android
+    rxandroidVersion = '2.0.2'
+
+    //Rx Java 2 Debug
+    rxJavaDebug= "1.2.2"
+
+    //Rx Kotlin
+    rxkotlinVersion = '2.2.0'
+
+    //Rx Relay
+    rxrelay_version = '2.0.0'
+
+    //Rx Binding
+    rxBindingVersion = '2.1.1'
+
+    //Room
+    archRoomVersion = '1.1.1'
+
+    //Dagger
+    daggerVersion = '2.16'
+
+    //Anko
+    ankoVersion = '0.10.4'
+
+    //Leak Canary
+    leakcanaryVersion = '1.5'
+
+    //Lifecycle and LiveData and ViewModel
+    lifecycleVersion = '1.1.0'
+    lifecycleExtVersion = '1.1.1'
+
+    //Timber
+    timberVersion = '4.7.0'
+
+    //Gson
+    gsonVersion = '2.8.2'
+
+    //Testing
+    jsonVersion = '20140107'
+    junitVersion = '4.12'
+    archCoreTesting = '1.1.1'
+    testRunnerVersion = '1.0.2'
+    espressoVersion = '3.0.2'
+
+    //Robolectric
+    robolectricVersion = '3.8'
+    robolectricMultidexVersion = '3.3'
+
+    //Mockito
+    mokitoVersion = '2.8.9'
+    mokitoAndroidVersion = '2.7.22'
+
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
