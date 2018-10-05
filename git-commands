@@ -3,6 +3,9 @@ git public/private key
 enter enter 
 1. Add public key on server.
 2. Use private on client machine.
+For other location
+>ssh-keygen -f /locationpath/id_rsa
+
 
 For adding to new repository
 git init
