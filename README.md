@@ -1,7 +1,7 @@
 # Zoom Emulator
-Cmd + Down Arrow = Decrease Screen Size
-Cmd + Up Arrow = Increase Screen Size
-Cmd + Right Arrow = Change Screen Orientation
+1. Cmd + Down Arrow = Decrease Screen Size
+2. Cmd + Up Arrow = Increase Screen Size
+3. Cmd + Right Arrow = Change Screen Orientation
 
 # Dependencies
 
