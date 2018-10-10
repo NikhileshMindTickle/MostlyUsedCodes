@@ -1,3 +1,8 @@
+# Zoom Emulator
+Cmd + Down Arrow = Decrease Screen Size
+Cmd + Up Arrow = Increase Screen Size
+Cmd + Right Arrow = Change Screen Orientation
+
 # Dependencies
 
 *Data Binding*
