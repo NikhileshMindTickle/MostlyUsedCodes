@@ -83,6 +83,11 @@ git push -u origin master
 To pull changes from server:
 git pull origin master
 
+Delete all untracked files & Directory
+git clean -fd
+-f : Force
+-d : Remove untracked directories in addition to untracked files
+
 Discard All Files
 git reset --hard
 
