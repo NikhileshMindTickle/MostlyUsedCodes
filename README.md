@@ -4,9 +4,10 @@
 3. Cmd + Right Arrow = Change Screen Orientation
 
 # Optimize Gradle
+```
 Settings->Compiler->In Command line Options
 -Pdisable-performance-plugin -PdevBuild --offline
-
+```
 
 # Dependencies
 
