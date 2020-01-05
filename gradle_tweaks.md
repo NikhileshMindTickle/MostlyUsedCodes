@@ -14,8 +14,14 @@ kapt.use.worker.api=true
 kapt.include.compile.classpath=false
 ```
 
-# compiler
+# Compiler
 Add this in compiler in android studio preferences(remove --daemon as it is overrided)
 ```
 -P disable-performance-plugin -P devBuild -P disableLeakCanary --offline --profile --configure-on-demand --build-cache --parallel --daemon
+```
+
+# Gradle Commands
+```
+./gradlew --status
+./gradlew --stop
 ```
