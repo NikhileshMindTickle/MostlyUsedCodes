@@ -1,4 +1,5 @@
 # gradle.properties (Add this in path user/.gradle/gradle.properties)
+```
 org.gradle.daemon=true
 org.gradle.jvmargs=-Xmx8096m -XX:MaxPermSize=2024m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
 org.gradle.parallel=true
@@ -10,6 +11,9 @@ android.enableBuildCache=true
 kapt.incremental.apt=true
 kapt.use.worker.api=true
 kapt.include.compile.classpath=false
+```
 
 # Add this in compiler in android studio preferences(remove --daemon as it is overrided)
+```
 -P disable-performance-plugin -P devBuild -P disableLeakCanary --offline --profile --configure-on-demand --build-cache --parallel --daemon
+```
