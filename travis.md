@@ -1,4 +1,4 @@
-Add this travis file to run android project
+Add this as travis file(.travis.yml) to root folder of project to build android project.
 ```
 language: android
 sudo: required
