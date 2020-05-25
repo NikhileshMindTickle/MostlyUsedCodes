@@ -2,8 +2,8 @@ To trigger build
 ```
  git commit -m "on tag 1.6 commit"
  git tag 1.6
- git push origin 1.6
- git push origin master
+ git push origin 1.6 // If in deploy section is mentioned only on tag then this will update the release
+ git push origin master // If not then normal branch push will work
  
  And let the tag build to finish on travis it will overrite the previously pushed tag
 ```
