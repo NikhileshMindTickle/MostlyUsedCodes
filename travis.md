@@ -1,3 +1,14 @@
+Setup
+```
+Go to Github -> Settings -> Developer Settings -> Personal access tokens -> Generate New Token
+Token Name - travis(You can keep any)
+Select - repo it will tick all repo:status,repo_deployment,public_repo,repo:invite,security_events
+Now go to travis -> Go to Project Settings -> In Environment Variables -> 
+Name - GITHUB_API_KEY
+Value - your key
+Branches - All branches(Its your choice)
+
+```
 To trigger build
 ```
  git commit -m "on tag 1.6 commit"
