@@ -1,3 +1,9 @@
+To trigger build
+```
+git commit -m "something"
+git tag dev-build-1.1.3
+git push origin your-branch
+```
 Add this as travis file(.travis.yml) to root folder of project to build android project.
 ```
 language: android
