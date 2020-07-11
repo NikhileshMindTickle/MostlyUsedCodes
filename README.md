@@ -67,9 +67,11 @@ val runTasks = gradle.startParameter.taskNames
 -Pdisable-performance-plugin -PdevBuild --offline
 ```
 
-2. Gradle Offline - Avoids checking dependency updates
-```
+2. Gradle Offline
+Avoids checking dependency updates
+
 3. gradle.properties
+```
 org.gradle.daemon=true
 org.gradle.jvmargs=-Xmx8192m -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
 org.gradle.parallel=true
