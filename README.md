@@ -48,6 +48,15 @@ org.gradle.caching=true
 android.enableBuildCache=true
 ```
 
+# Keystore
+```
+To print keystore signature details
+keytool -list -v -keystore sample.jks -alias sample
+
+To print apk signature details
+keytool -printcert -jarfile main-1.0-release.apk
+```
+
     
 Android User Agent
 ```
