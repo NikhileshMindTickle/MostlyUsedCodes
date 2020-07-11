@@ -20,6 +20,22 @@ adb shell am broadcast -a com.android.systemui.demo -e command exit
 2. Cmd + Up Arrow = Increase Screen Size
 3. Cmd + Right Arrow = Change Screen Orientation
 
+# Commands
+To get list system images
+```
+sdkmanager --list
+```
+
+To print keystore signature details
+```
+keytool -list -v -keystore sample.jks -alias sample
+```
+
+To print apk signature details
+```
+keytool -printcert -jarfile main-1.0-release.apk
+```
+
 # Gradle
 ```
 # In Gradle to read parameter Value
@@ -46,15 +62,6 @@ android.useAndroidX=true
 android.enableJetifier=true
 org.gradle.caching=true
 android.enableBuildCache=true
-```
-
-# Keystore
-```
-To print keystore signature details
-keytool -list -v -keystore sample.jks -alias sample
-
-To print apk signature details
-keytool -printcert -jarfile main-1.0-release.apk
 ```
 
     
