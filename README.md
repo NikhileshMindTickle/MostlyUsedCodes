@@ -20,6 +20,16 @@ adb shell am broadcast -a com.android.systemui.demo -e command exit
 2. Cmd + Up Arrow = Increase Screen Size
 3. Cmd + Right Arrow = Change Screen Orientation
 
+# Gradle
+```
+# In Gradle to read parameter Value
+project.property("autoIncrement")
+# In Gradle to check if contains key
+project.hasProperty("autoIncrement")
+# All Gradle Tasks 
+val runTasks = gradle.startParameter.taskNames
+```
+
 # Optimize Gradle
 ```
 1. Settings->Compiler->In Command line Options
