@@ -1,21 +1,25 @@
 git public/private key
+```
 >ssh-keygen
 enter enter 
 1. Add public key on server.
 2. Use private on client machine.
 For other location
 >ssh-keygen -f /locationpath/id_rsa
-
+```
 
 For adding to new repository
+```
 git init
 git remote add origin https://github.com/MeNiks/MyFragmentCommunication.git
 git pull -u origin master
 git add README.md
 git commit -m "first commit"
 git push -u origin master
+```
 
 For adding remote repo
+```
 git remote add origin https://github.com/MeNiks/abcd_repository.git
 
 git config --global core.editor "'C:\Program Files (x86)\Program\program.exe' -n -w"
@@ -28,8 +32,12 @@ git log --graph --oneline master easy-mode
 
 git status
 
+```
+
 To fetch all remote branches
+```
 git fetch --all
+```
 
 To check list of branches
 ```
