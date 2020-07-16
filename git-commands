@@ -71,6 +71,9 @@ git push origin --delete <branch_name>
 After deleting local branch, push to also remove deleted local branch from remote:
 git push origin :branch_name
 
+To delete all local branches
+git branch | grep -v "master" | xargs git branch -D
+
 To know the branch name of remote:
 git remote
 
