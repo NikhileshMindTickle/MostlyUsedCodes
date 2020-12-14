@@ -24,4 +24,5 @@ Add this in compiler in android studio preferences(remove --daemon as it is over
 ```
 ./gradlew --status
 ./gradlew --stop
+pkill -f '.*GradleDaemon.*'
 ```
