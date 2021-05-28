@@ -25,6 +25,47 @@ Exit Changes
 adb shell am broadcast -a com.android.systemui.demo -e command exit
 ```
 
+# Emulator Commandline
+```
+Skin Path
+/Users/Drive/androidsdk/skins
+
+Adv created path
+/Users/nikhilesh/.android/avd
+
+sdkmanager --list
+
+sdkmanager "platform-tools" "platforms;android-28
+
+sdkmanager "system-images;android-R;google_apis_playstore;x86"
+
+avdmanager list device
+
+avdmanager create avd -n avdtest -k "system-images;android-R;google_apis_playstore;x86" -d "pixel"
+
+
+avdmanager delete avd -n avdtest
+
+
+Start adb sync
+emulator -avd avdtest -netdelay none -netspeed full
+
+
+Start adb async
+emulator -avd avdtest -no-snapshot -no-window -no-audio -no-boot-anim -camera-back none -camera-front none -qemu -m 2048 > /dev/null 2>&1 &
+After starting avd wait terminal till avd boots
+adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d '\r') ]]; do sleep 1; done; input keyevent 82'
+
+
+Close emulator
+adb emu kill
+
+
+Mac
+ps -ax | grep emulator 
+kill -9 PID
+```
+
 # Zoom Emulator
 1. Cmd + Down Arrow = Decrease Screen Size
 2. Cmd + Up Arrow = Increase Screen Size
